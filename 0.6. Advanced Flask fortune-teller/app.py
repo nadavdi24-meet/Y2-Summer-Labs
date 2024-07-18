@@ -28,16 +28,14 @@ def fortune():
 @app.route("/indecisive")
 def indecisive():
 	indecisive_fortunes = []
-	for i in range(3):
-		print(i)
-		print(indecisive_fortunes)
+	num_of_fortunes = 0
+	while num_of_fortunes <= 2:
 		random_fortune = random.choice(possible_fortunes)
-		print(random_fortune)
 		if random_fortune in indecisive_fortunes:
-			i -= 1
+			num_of_fortunes -= 1
 		else:
 			indecisive_fortunes.append(random_fortune)
-		print(i)
+		num_of_fortunes += 1
 	return render_template("indecisive.html" , indecisive_fortunes = indecisive_fortunes)
 
 
