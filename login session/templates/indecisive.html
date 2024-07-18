@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Indecisive fortune</title>
+</head>
+
+<body>
+
+	<h1>I'm not sure what will happen to you, but it will be one of the following three things:</h1>
+	{%for i in indecisive_fortunes%}
+
+		<h2>{{i}}</h2>
+		<br>
+
+	{%endfor%}
+
+<h3><a href="/home">Home</a></h3>
+
+</body>
+
+</html>
