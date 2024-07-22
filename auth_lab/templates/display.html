@@ -8,8 +8,9 @@
 
 <body>
 
-	{%for i in quotes%}
-		<h1>{{i}}</h1> <br>
+	<h6>{{db}}</h6> <br><br>
+	{%for i in quotes.values()%}
+		<h1>{{i["text"]}} - {{i["said_by"]}}</h1> <br>
 	{%endfor%}
 
 	<h4><a href="/home">home</a></h4>

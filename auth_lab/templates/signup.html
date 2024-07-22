@@ -8,9 +8,16 @@
 
 <body>
 
+	{%if error%}
+		<h1>{{error_text}} BITCH!</h1>
+	{%endif%}
+
+
 	<form action="/" method="POST">
-		<input type="text" name="email" placeholder="Email">
-		<input type="text" name="password" placeholder="Password">
+		<input type="text" name="email" placeholder="Email...">
+		<input type="text" name="password" placeholder="Password...">
+		<input type="text" name="full_name" placeholder="Full Name...">
+		<input type="text" name="user_name" placeholder="User name...">
 		<input type="submit" value="submit">
 	</form>	
 

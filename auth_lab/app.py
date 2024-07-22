@@ -1,50 +1,60 @@
 import pyrebase
 from flask import Flask , render_template , request , redirect , url_for
 from flask import session as login_session
+from requests.exceptions import HTTPError
+import json
 
 
 app = Flask(__name__ , template_folder = "templates")
 
 app.config['SECRET_KEY'] = 'super-secret-key'
 
-
 firebaseConfig = {
-  "apiKey": "AIzaSyBN1GWq8ks55hEQ-c4-NPWcoBcw9HXIsCE",
-  "authDomain": "auth-lab-f98c9.firebaseapp.com",
-  "projectId": "auth-lab-9f8c9",
-  "storageBucket": "auth-lab-f98c9.appspot.com",
-  "messagingSenderId": "523981179319",
-  "appId": "1:523981179319:web:6c8fdeb19935ba68378032",
-  "measurementId": "G-43XMCRFBBW",
-  "databaseURL":""
+  "put in api"
 }
 
 
 firebase = pyrebase.initialize_app(firebaseConfig)
 auth = firebase.auth()
-
+db = firebase.database()
 @app.route("/" , methods = ["GET" , "POST"])
 def signup():
   if request.method == "POST":
     email = request.form['email']
     password = request.form['password']
-    login_session["user"] = auth.create_user_with_email_and_password(email , password)
-    login_session["quotes"] = []
-    login_session["email"] = email
-    login_session["password"] = password
-    return redirect(url_for("home"))
-  return render_template("signup.html")
+    full_name = request.form["full_name"]
+    user_name = request.form["user_name"]
+    try:
+        login_session["quotes"] = []
+        login_session["email"] = email
+        login_session["password"] = password
+        user = auth.create_user_with_email_and_password(email, password)
+        login_session["user"] = user
+        user_dict = {"full_name" : full_name , "email" : email , "user_name" : user_name , "uid" : login_session["user"]["localId"]}
+        db.child("Users").set(user_dict)
+        print(db)
+        return redirect(url_for("home"))
+
+    except HTTPError as e:
+      error = True
+      error_text = json.loads(e.args[1])["error"]["message"]
+  else:
+    error = False
+    error_text = ""
+
+  return render_template("signup.html" , error = error , error_text = error_text)
 
 @app.route("/signin" , methods = ["GET" , "POST"])
 def signin():
-  if request.method == "GET":
-    return render_template("signin.html")
+  return render_template("signin.html")
 
 @app.route("/home" , methods = ["GET" , "POST"])
 def home():
   if request.method == "POST":
-    login_session["quotes"].append(request.form["quote"])
-    login_session.modified = True
+    quote = {"text" : request.form["quote"] , "said_by" : request.form["said_by"] , "uid" : login_session["user"]["localId"]}
+    db.child("Quotes").push(quote)
+    print(db.get().val())
+
     return redirect(url_for("thanks"))
   return render_template("home.html")
 
@@ -52,7 +62,7 @@ def home():
 def signout():
   login_session['user'] = None
   auth.current_user = None
-  return render_template("signin.html")
+  return redirect(url_for("signin"))
 
 
 @app.route("/thanks" , methods = ["GET" , "POST"])
@@ -62,8 +72,7 @@ def thanks():
 
 @app.route("/display" , methods = ["GET" , "POST"])
 def display():
-  quotes = login_session["quotes"]
-  return render_template("display.html" , quotes = quotes)
+  return render_template("display.html" , quotes = db.child("Quotes").get().val())
 
 if __name__ == '__main__':
     app.run(debug=True)
