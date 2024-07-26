@@ -10,12 +10,7 @@ app = Flask(__name__ , template_folder = "templates")
 app.config['SECRET_KEY'] = 'super-secret-key'
 
 firebaseConfig = {
-    "apiKey": "AIzaSyBSBthCNkc0HWtGL9J-K4sDTu5wcELgu8Y",
-    "authDomain": "individual-project-ff8c8.firebaseapp.com",
-    "projectId": "individual-project-ff8c8",
-    "storageBucket": "individual-project-ff8c8.appspot.com",
-    "messagingSenderId": "661740802763",
-    "appId" : "1:661740802763:web:8be2f20fe892710663814e",
+"your api key"
     "databaseURL" : "https://individual-project-ff8c8-default-rtdb.europe-west1.firebasedatabase.app/"
 }
 
@@ -105,13 +100,10 @@ def album():
   if request.method == "POST":
     if "recommendations_chosen_album" in request.form:
       chosen_album = request.form["recommendations_chosen_album"]
-      print("1")
     elif "saved_albums_form" in request.form:
       chosen_album = request.form["saved_albums_form"]
-      print("2")
     else:
       chosen_album = request.form["saved_album_page"]
-      print("3")
     print(chosen_album)
     if type(chosen_album) == str:
       chosen_album = eval(chosen_album)
