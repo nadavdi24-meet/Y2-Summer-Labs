@@ -1,0 +1,47 @@
+{
+    "angry": {
+      "artist": "Charles Mingus",
+      "description": "Released in 1963, 'Mingus Ah Um' by Charles Mingus is a powerful and intense jazz album. Known for its innovative compositions and emotional depth, tracks like 'Fables of Faubus' express a strong sense of anger and social commentary.",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvwygR-1iGv33okt7jr6KGf94wYagN8kc9KQ&s",
+      "link": "https://youtube.com/playlist?list=OLAK5uy_n4zhWuYMV5BEn_RR1G6L4XzXoj8O5fRwk&si=iHq8zK0dLOpHvMSK",
+      "name": "Mingus Ah Um",
+      "mood": "angry",
+      "genre": "jazz"
+    },
+    "chill": {
+      "artist": "Miles Davis",
+      "description": "Released in 1959, 'Kind of Blue' by Miles Davis is a quintessential jazz album known for its cool, laid-back atmosphere. Featuring tracks like 'So What' and 'Freddie Freeloader,' the album is perfect for relaxation and chill vibes.",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAy-bTvV5Iui_drDL4VrWSUB_rsa8SIUuSug&s",
+      "link": "https://youtube.com/playlist?list=OLAK5uy_kLtBpVbGac_7xgJC4x9cRpeiLfjt9T1Pk&si=hsglE07KG7opVOd7",
+      "name": "Kind of Blue",
+      "mood": "chill",
+      "genre": "jazz"
+    },
+    "happy": {
+      "artist": "Ella Fitzgerald & Louis Armstrong",
+      "description": "Released in 1956, 'Ella and Louis' is a delightful collaboration between Ella Fitzgerald and Louis Armstrong. The album features joyful and uplifting performances of jazz standards like 'Cheek to Cheek' and 'They Can't Take That Away from Me.'",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV3_wn3Z_81-KGe2YhK5QfvyJCJi3sqFqhjg&s",
+      "link": "https://youtube.com/playlist?list=OLAK5uy_krHVPjgGUjZzGAWMWP_lRRJN45I_Ywb7w&si=hJZmRX20Q1aI04R1",
+      "name": "Ella and Louis",
+      "mood": "happy",
+      "genre": "jazz"
+    },
+    "love": {
+      "artist": "John Coltrane",
+      "description": "Released in 1957, 'Ballads' by John Coltrane is a deeply romantic and introspective album. Featuring tender renditions of standards like 'My One and Only Love' and 'I Wish I Knew,' the album is perfect for a mood of love and intimacy.",
+      "img": "https://upload.wikimedia.org/wikipedia/en/5/5b/John_Coltrane_Ballads.jpg",
+      "link": "https://youtube.com/playlist?list=OLAK5uy_mtENQ8NDLyIYAwoGRkbWg7FEI3N3Xnahc&si=onpNltB_RT4s5ZwV",
+      "name": "Ballads",
+      "mood": "love",
+      "genre": "jazz"
+    },
+    "sad": {
+      "artist": "Billie Holiday",
+      "description": "Released in 1956, 'Lady in Satin' by Billie Holiday is a poignant and emotional album that captures the depth of Holiday's feelings. Tracks like 'I'm a Fool to Want You' and 'You've Changed' reflect themes of sadness and vulnerability.",
+      "img": "https://upload.wikimedia.org/wikipedia/en/5/52/Ladyinsatin2.jpg",
+      "link": "https://youtube.com/playlist?list=OLAK5uy_lLNP0UrVdi0CEHnqZwzFYqoHdVTUYp1m0&si=olT-1__6esS754hu",
+      "name": "Lady in Satin",
+      "mood": "sad",
+      "genre": "jazz"
+    }
+}

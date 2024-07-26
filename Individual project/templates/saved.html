@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Saved Albums</title>
+</head>
+<body>
+
+	<h1>Saved Albums</h1>
+
+	<form action="/album" , methods="POST">
+		{%for i in saved_albums%}
+			<button name="saved_album_page" value="{{i}}" style="width: 300px; height: 300px;">
+				<img src="{{i['img']}}" height="150px" width="150px" style="justify-content: center; align-content: center;">
+				<p style="font-size: 20px;">{{i["name"]}} - <br>{{i["artist"]}}</p>
+				<h5>{{i["mood"]}} {{i["genre"]}}</h5>
+			</button>
+		{%endfor%}
+	</form>
+
+</body>
+</html>

@@ -32,7 +32,6 @@ def signup():
         login_session["user"] = user
         user_dict = {"full_name" : full_name , "email" : email , "user_name" : user_name , "uid" : login_session["user"]["localId"]}
         db.child("Users").set(user_dict)
-        print(db)
         return redirect(url_for("home"))
 
     except HTTPError as e:
@@ -53,7 +52,6 @@ def home():
   if request.method == "POST":
     quote = {"text" : request.form["quote"] , "said_by" : request.form["said_by"] , "uid" : login_session["user"]["localId"]}
     db.child("Quotes").push(quote)
-    print(db.get().val())
 
     return redirect(url_for("thanks"))
   return render_template("home.html")

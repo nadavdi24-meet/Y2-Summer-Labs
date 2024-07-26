@@ -1,0 +1,47 @@
+{
+    "angry": {
+      "artist": "Rage Against the Machine",
+      "description": "Released in 1992, the self-titled debut album 'Rage Against the Machine' is known for its raw energy and politically charged lyrics. Tracks like 'Killing in the Name' and 'Bullet in the Head' convey powerful messages of rebellion and frustration.",
+      "img": "https://upload.wikimedia.org/wikipedia/en/1/1a/RageAgainsttheMachineRageAgainsttheMachine.jpg",
+      "link": "https://youtube.com/playlist?list=PLZSpx1qgL044RQ9gam5dpLD-EYl1BwEND&si=s3bHF84mwsYa-c2_",
+      "name": "Rage Against the Machine",
+      "mood": "angry",
+      "genre": "rock"
+    },
+    "chill": {
+      "artist": "Pink Floyd",
+      "description": "Released in 1973, 'The Dark Side of the Moon' is an iconic album by Pink Floyd that combines psychedelic rock with atmospheric soundscapes. The album is known for its conceptual themes and relaxing tracks like 'Breathe' and 'Us and Them.'",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmLdDf01WHXn-z1-1vvwlZrL8FQj9mysT9wg&s",
+      "link": "https://youtube.com/playlist?list=PL3PhWT10BW3Urh8ZXXpuU9h526ChwgWKy&si=QTrELzI6YfaY1z_s",
+      "name": "The Dark Side of the Moon",
+      "mood": "chill",
+      "genre": "rock"
+    },
+    "happy": {
+      "artist": "The Beatles",
+      "description": "Released in 1967, 'Sgt. Pepper's Lonely Hearts Club Band' by The Beatles is a groundbreaking album that combines pop rock with a sense of whimsy and joy. Songs like 'With a Little Help from My Friends' and 'Lucy in the Sky with Diamonds' are uplifting and celebratory.",
+      "img": "https://upload.wikimedia.org/wikipedia/en/5/50/Sgt._Pepper%27s_Lonely_Hearts_Club_Band.jpg",
+      "link": "https://youtube.com/playlist?list=PL3PhWT10BW3VDM5IcVodrdUpVIhU8f7Z-&si=0HqueyCs7wxgrkEa",
+      "name": "Sgt. Pepper's Lonely Hearts Club Band",
+      "mood": "happy",
+      "genre": "rock"
+    },
+    "love": {
+      "artist": "Led Zeppelin",
+      "description": "Released in 1969, 'Led Zeppelin II' is an influential rock album that features powerful love songs like 'Whole Lotta Love' and 'Thank You.' The album combines heavy rock riffs with passionate lyrics.",
+      "img": "https://upload.wikimedia.org/wikipedia/en/2/20/Led_Zeppelin_-_Led_Zeppelin_II.jpg",
+      "link": "https://youtube.com/playlist?list=PLK4hWf5BLwHVMlX76A0XRq5T7I9hWOCI5&si=WeE_iU6vidPQWGfO",
+      "name": "Led Zeppelin II",
+      "mood": "love",
+      "genre": "rock"
+    },
+    "sad": {
+      "artist": "Radiohead",
+      "description": "Released in 1997, 'OK Computer' by Radiohead is a critically acclaimed album known for its melancholic and introspective themes. Tracks like 'Exit Music (For a Film)' and 'No Surprises' convey a sense of sadness and alienation.",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtWGSIvVyEH5txLOSUeWDmU69a4x7H4AYXjA&s",
+      "link": "https://youtube.com/playlist?list=PLxzSZG7g8c8x6GYz_FcNr-3zPQ7npP6WF&si=EViSc86LHXds5eHT",
+      "name": "OK Computer",
+      "mood": "sad",
+      "genre": "rock"
+    }
+}

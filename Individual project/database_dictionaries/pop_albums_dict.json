@@ -1,0 +1,47 @@
+{
+    "angry": {
+      "artist": "Billie Eilish",
+      "description": "Released in 2019, 'WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?' is Billie Eilish's debut studio album. Known for its dark and edgy themes, the album features tracks like 'bad guy' and 'you should see me in a crown,' which capture a sense of angst and defiance.",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-Iz3wv4AIVC5XV-n9NhmUffdYj5JnlJou1A&s",
+      "link": "https://youtube.com/playlist?list=PLMSmPqvJ6siJwH_c2H_N8j9JqDt8ogyny&si=6M0IbCc2jGeyln4-",
+      "name": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",
+      "mood": "angry",
+      "genre": "pop"
+    },
+    "chill": {
+      "artist": "Norah Jones",
+      "description": "Released in 2002, 'Come Away with Me' is the debut studio album by Norah Jones. The album blends elements of jazz, soul, and country, creating a relaxing and soothing atmosphere with tracks like 'Don't Know Why' and 'Come Away with Me.'",
+      "img": "https://upload.wikimedia.org/wikipedia/en/0/00/Norah_Jones_-_Come_Away_With_Me.jpg",
+      "link": "https://youtube.com/playlist?list=PLPT2ybbCaDoI6aJ3gWJeSqsAcA1PjZ9dk&si=1bxcNXJn5DKCHgSt",
+      "name": "Come Away with Me",
+      "mood": "chill",
+      "genre": "pop"
+    },
+    "happy": {
+      "artist": "Katy Perry",
+      "description": "Released in 2010, 'Teenage Dream' by Katy Perry is a vibrant pop album filled with energetic and joyful tracks like 'California Gurls' and 'Firework.' The album captures the spirit of youthful exuberance and fun.",
+      "img": "https://i1.sndcdn.com/artworks-000241564597-rjt67l-t500x500.jpg",
+      "link": "https://youtube.com/playlist?list=OLAK5uy_muXB8pYp-DYy_IzPo-XyuFf1tC5Tg8K-w&si=9TCT70hAwm3l5njr",
+      "name": "Teenage Dream",
+      "mood": "happy",
+      "genre": "pop"
+    },
+    "love": {
+      "artist": "Taylor Swift",
+      "description": "Released in 2019, 'Lover' is Taylor Swift's seventh studio album. It is a celebration of love in all its forms, featuring romantic tracks like 'Lover' and 'Cornelia Street.' The album is characterized by its dreamy and heartfelt lyrics.",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUIxLaTdWPAoX6Vp36RhWvU-4eHg_gO7hASg&s",
+      "link": "https://youtube.com/playlist?list=OLAK5uy_nHHWc9S0Nw7oLyLYBptkJ4DpkQeoL1Igw&si=aUuaP-pbXvyv1pod",
+      "name": "Lover",
+      "mood": "love",
+      "genre": "pop"
+    },
+    "sad": {
+      "artist": "Adele",
+      "description": "Released in 2011, '21' is Adele's second studio album. Known for its deeply emotional and soulful tracks, the album features songs like 'Someone Like You' and 'Rolling in the Deep,' which capture themes of heartbreak and sorrow.",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq5vVfOlFlMdHxA8SwRW2rv4aSN5MeUvzPFw&s",
+      "link": "https://youtube.com/playlist?list=OLAK5uy_lsuxdGgPph2W51o_buAsToX6pSkkvCAN8&si=G-jeuEqYYEz_Nn7u",
+      "name": "21",
+      "mood": "sad",
+      "genre": "pop"
+    }
+}

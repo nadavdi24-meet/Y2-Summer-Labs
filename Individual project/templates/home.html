@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home</title>
+</head>
+
+<body>
+
+	<h1>Welcome to the album recommendations website!</h1>
+	<h2><a href="/search">Search an album ----></a></h2>
+	<br>
+	<h2>Recommendations</h2>
+	<form action="/album" method="POST">
+		{%for i in recommended_list%}
+				<button name="recommendations_chosen_album" value="{{i}}" style="width: 300px; height: 350px;">
+					<img src="{{i['img']}}" height="150px" width="150px" style="justify-content: center; align-content: center;">
+					<p style="font-size: 20px;">{{i["name"]}} - <br>{{i["artist"]}}</p>
+					<h5>{{i["mood"]}} {{i["genre"]}}</h5>
+				</button>
+		{%endfor%}
+	</form>
+
+		<h2>Saved Albums</h2>
+		{%if logged_in%}
+			<form action="/album" method="POST">
+				{%if saved_albums|length <= 3%}
+					{%if saved_albums|length == 0%}
+						<h3>You have not saved any albums.</h3>
+					{%else%}
+						{%for i in saved_albums%}
+							<button name="saved_albums_form" value="{{i}}" style="width: 300px; height: 300px;">
+								<img src="{{i['img']}}" height="150px" width="150px" style="justify-content: center; align-content: center;">
+								<p style="font-size: 20px;">{{i["name"]}} - <br>{{i["artist"]}}</p>
+								<h5>{{i["mood"]}} {{i["genre"]}}</h5>
+							</button>
+						{%endfor%}
+					{%endif%}
+				{%else%}
+					{%for i in range(3)%}
+						<button name="saved_albums_form" value="{{saved_albums[i]}}" style="width: 300px; height: 300px;">
+							<img src="{{saved_albums[i]['img']}}" height="150px" width="150px" style="justify-content: center; align-content: center;">
+							<p style="font-size: 20px;">{{saved_albums[i]["name"]}} - <br>{{saved_albums[i]["artist"]}}</p>
+							<h5>{{saved_albums[i]["mood"]}} {{saved_albums[i]["genre"]}}</h5>
+						</button>
+					{%endfor%}
+				{%endif%}
+
+			</form>
+			<h4><a href="/saved">view all</a></h4>
+		{%else%}
+			<h3><a href="/">Sign up</a> to save albums</h3>
+		{%endif%}
+
+
+</body>
+
+</html>

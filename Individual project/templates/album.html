@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Album</title>
+</head>
+
+<body>
+
+	<h1>{{chosen_album["name"]}} - {{chosen_album["artist"]}}</h1>
+	<img src="{{chosen_album['img']}}" height="300px" , width="300px">
+	<h3>{{chosen_album["description"]}}</h3>
+
+	{%if logged_in%}
+		<form action="/home" , method="POST">
+			<button name="save_album" value="{{chosen_album}}">Save album</button>
+		</form>
+	{%endif%}
+
+	<h3><a href="/home">Home</a></h3>
+
+
+
+
+
+</body>
+
+</html>

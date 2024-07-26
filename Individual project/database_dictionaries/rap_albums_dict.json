@@ -1,0 +1,47 @@
+{
+    "angry": {
+      "artist": "Kendrick Lamar",
+      "description": "Released in 2015, 'To Pimp a Butterfly' by Kendrick Lamar addresses themes of racial inequality, oppression, and personal struggles. Tracks like 'The Blacker the Berry' and 'Alright' express a powerful sense of anger and resistance.",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBpVIpcgToUCelFlu1xKeYBolRE1Z9tyTOoQ&s",
+      "link": "https://youtube.com/playlist?list=OLAK5uy_n_dmtzA0IWImBN3fbUBUl_WgD-YSaMZaI&si=O9BPTwkzNozV3Ouz",
+      "name": "To Pimp a Butterfly",
+      "mood": "angry",
+      "genre": "rap"
+    },
+    "chill": {
+      "artist": "A Tribe Called Quest",
+      "description": "Released in 1993, 'Midnight Marauders' by A Tribe Called Quest is known for its smooth beats and laid-back vibe. The album includes tracks like 'Electric Relaxation' and 'Award Tour,' which are perfect for a chill atmosphere.",
+      "img": "https://m.media-amazon.com/images/I/81opIAmQheL._UF1000,1000_QL80_.jpg",
+      "link": "https://youtube.com/playlist?list=OLAK5uy_ncxk2dzMeB4E9vgbWeMvM_O_SydgJR2C0&si=Ee975Cff_CR70l4E",
+      "name": "Midnight Marauders",
+      "mood": "chill",
+      "genre": "rap"
+    },
+    "happy": {
+      "artist": "Kanye West",
+      "description": "Released in 2007, 'Graduation' by Kanye West is filled with upbeat and celebratory tracks like 'Good Life' and 'Stronger.' The album exudes a positive and triumphant energy.",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjjQ3Dcj2FvF1nsOQhqvx6o6Gb8KOEwie_rQ&s",
+      "link": "https://youtube.com/playlist?list=OLAK5uy_nc43MhHfperN5ZrIST7rsl0o5NOURZISk&si=-tIMhqXhnpuiruKQ",
+      "name": "Graduation",
+      "mood": "happy",
+      "genre": "rap"
+    },
+    "love": {
+      "artist": "Drake",
+      "description": "Released in 2011, 'Take Care' by Drake explores themes of love and relationships. The album includes romantic tracks like 'Marvins Room' and 'Take Care,' featuring Rihanna.",
+      "img": "https://upload.wikimedia.org/wikipedia/en/a/ae/Drake_-_Take_Care_cover.jpg",
+      "link": "https://youtube.com/playlist?list=OLAK5uy_m6Sss1kO7j8so_ce3sDT8Xa5RZz6mERNQ&si=XtEgKlO0g-styWS-",
+      "name": "Take Care",
+      "mood": "love",
+      "genre": "rap"
+    },
+    "sad": {
+      "artist": "Kid Cudi",
+      "description": "Released in 2009, 'Man on the Moon: The End of Day' is Kid Cudi's debut album. It is known for its introspective and melancholic themes, with tracks like 'Day 'n' Nite' and 'Pursuit of Happiness' reflecting personal struggles and emotional lows.",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTGQ0YE1wYqT2_Su0gGJrzuhWQZeAmKeXqnQ&s",
+      "link": "https://youtube.com/playlist?list=OLAK5uy_m8KPDcM8TAVmfNPUvyqBrqwO4SLcs1_nM&si=NWN7AJPUcosxo0TA",
+      "name": "Man on the Moon: The End of Day",
+      "mood": "sad",
+      "genre": "rap"
+    }
+}
