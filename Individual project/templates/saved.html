@@ -10,13 +10,19 @@
 	<h1>Saved Albums</h1>
 
 	<form action="/album" , methods="POST">
-		{%for i in saved_albums%}
-			<button name="saved_album_page" value="{{i}}" style="width: 300px; height: 300px;">
-				<img src="{{i['img']}}" height="150px" width="150px" style="justify-content: center; align-content: center;">
-				<p style="font-size: 20px;">{{i["name"]}} - <br>{{i["artist"]}}</p>
-				<h5>{{i["mood"]}} {{i["genre"]}}</h5>
-			</button>
-		{%endfor%}
+
+		{%if (saved_albums == None) or (saved_albums|length == 0)%}
+			<h3>You have no saved albums.</h3>
+		{%else%}
+			{%for i in saved_albums%}
+				<button name="saved_album_page" value="{{i}}" style="width: 300px; height: 300px;">
+					<img src="{{i['img']}}" height="150px" width="150px" style="justify-content: center; align-content: center;">
+					<p style="font-size: 20px;">{{i["name"]}} - <br>{{i["artist"]}}</p>
+					<h5>{{i["mood"]}} {{i["genre"]}}</h5>
+				</button>
+			{%endfor%}
+		{%endif%}
+		<h2><a href="/home">Home</a></h2>
 	</form>
 
 </body>

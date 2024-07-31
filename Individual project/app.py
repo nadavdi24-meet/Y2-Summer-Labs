@@ -10,8 +10,14 @@ app = Flask(__name__ , template_folder = "templates")
 app.config['SECRET_KEY'] = 'super-secret-key'
 
 firebaseConfig = {
-"your api key"
-    "databaseURL" : "https://individual-project-ff8c8-default-rtdb.europe-west1.firebasedatabase.app/"
+  "apiKey": "AIzaSyBSBthCNkc0HWtGL9J-K4sDTu5wcELgu8Y",
+  "authDomain": "individual-project-ff8c8.firebaseapp.com",
+  "databaseURL": "https://individual-project-ff8c8-default-rtdb.europe-west1.firebasedatabase.app",
+  "projectId": "individual-project-ff8c8",
+  "storageBucket": "individual-project-ff8c8.appspot.com",
+  "messagingSenderId": "661740802763",
+  "appId": "1:661740802763:web:8be2f20fe892710663814e",
+  "databaseURL" : "https://individual-project-ff8c8-default-rtdb.europe-west1.firebasedatabase.app/"
 }
 
 firebase = pyrebase.initialize_app(firebaseConfig)
@@ -56,6 +62,29 @@ def signup():
 
   return render_template("signup.html" , error = error , error_text = error_text)
 
+@app.route("/signin" , methods = ["GET" , "POST"])
+def signin():
+  error = ""
+  if request.method == 'POST':
+    email = request.form['email']
+    password = request.form['password']
+    try:
+      login_session['user'] = auth.sign_in_with_email_and_password(email, password)
+      login_session["logged_in"] = True
+      return redirect(url_for("home"))
+    except:
+      error = "Authentication failed"
+
+  return render_template("signin.html")
+
+
+@app.route('/signout')
+def signout():
+  login_session['user'] = None
+  auth.current_user = None
+  return redirect(url_for('signin'))
+
+
 @app.route("/home" , methods = ["GET" , "POST"])
 def home():
   if request.method == "POST":
@@ -83,8 +112,10 @@ def home():
       return render_template("home.html" , recommended_list = login_session["recommended_list"] , logged_in = login_session["logged_in"] , saved_albums = saved_albums)
     else:
       return render_template("home.html" , recommended_list = login_session["recommended_list"] , logged_in = login_session["logged_in"])
+  elif db.child("Users").child(login_session["user"]["localId"]).child("saved_albums").get().val() == None:
+      return render_template("home.html" , recommended_list = login_session["recommended_list"] , logged_in = login_session["logged_in"])
   else:
-      return render_template("home.html" , recommended_list = login_session["recommended_list"] , logged_in = login_session["logged_in"] , saved_albums = db.child("Users").child(login_session["user"]["localId"]).child("saved_albums").get().val())
+    return render_template("home.html" , recommended_list = login_session["recommended_list"] , logged_in = login_session["logged_in"] , saved_albums = db.child("Users").child(login_session["user"]["localId"]).child("saved_albums").get().val())
 
 @app.route("/search" , methods = ["GET" , "POST"])
 def search():
